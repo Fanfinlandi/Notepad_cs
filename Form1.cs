@@ -1,6 +1,8 @@
 using System.Data;
 using System.Drawing.Printing;
+using System.Timers;
 using System.Windows.Forms;
+
 
 
 namespace Notatnik
@@ -18,8 +20,6 @@ namespace Notatnik
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
-
         }
 
         private void exit(object sender, EventArgs e)
@@ -30,14 +30,12 @@ namespace Notatnik
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Pobierz tekst z TextBox
+
             string tekstDoWydruku = textBox1.Text;
 
-            // Ustawienia do rysowania tekstu
+
             Font czcionka = new Font("Arial", 12);
             Brush pêdzel = Brushes.Black;
-
-            // Rysuj tekst z TextBox na stronie
             e.Graphics.DrawString(tekstDoWydruku, czcionka, pêdzel, 10, 10);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -176,6 +174,25 @@ namespace Notatnik
             textBox1.Clear();
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox1.Font = new Font(textBox1.Font, FontStyle.Bold);
 
+        }
+        private void wybcz(object sender, EventArgs e)
+        {
+            using (FontDialog fontDialog = new FontDialog())
+            {
+                fontDialog.Font = textBox1.Font;
+
+                if (fontDialog.ShowDialog() == DialogResult.OK)
+                {
+
+                    textBox1.Font = fontDialog.Font;
+                }
+
+
+            }
+        }
     }
 }

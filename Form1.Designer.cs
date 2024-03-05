@@ -44,6 +44,8 @@
             button8 = new Button();
             button9 = new Button();
             button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -57,9 +59,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(748, 87);
+            button1.Location = new Point(748, 96);
             button1.Name = "button1";
-            button1.Size = new Size(67, 26);
+            button1.Size = new Size(67, 35);
             button1.TabIndex = 1;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
@@ -69,7 +71,7 @@
             // 
             button2.Location = new Point(748, 55);
             button2.Name = "button2";
-            button2.Size = new Size(67, 26);
+            button2.Size = new Size(67, 35);
             button2.TabIndex = 2;
             button2.Text = "Open";
             button2.UseVisualStyleBackColor = true;
@@ -77,9 +79,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(748, 375);
+            button3.Location = new Point(748, 365);
             button3.Name = "button3";
-            button3.Size = new Size(67, 26);
+            button3.Size = new Size(83, 36);
             button3.TabIndex = 3;
             button3.Text = "Exit";
             button3.UseVisualStyleBackColor = true;
@@ -150,7 +152,7 @@
             // button9
             // 
             button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.Location = new Point(279, 12);
+            button9.Location = new Point(334, 12);
             button9.Name = "button9";
             button9.Size = new Size(49, 37);
             button9.TabIndex = 9;
@@ -160,18 +162,41 @@
             // button10
             // 
             button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.Location = new Point(334, 12);
+            button10.Location = new Point(279, 12);
             button10.Name = "button10";
             button10.Size = new Size(49, 37);
             button10.TabIndex = 10;
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button11
+            // 
+            button11.Image = (Image)resources.GetObject("button11.Image");
+            button11.Location = new Point(389, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(49, 37);
+            button11.TabIndex = 11;
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button12
+            // 
+            button12.Image = (Image)resources.GetObject("button12.Image");
+            button12.Location = new Point(444, 12);
+            button12.Name = "button12";
+            button12.Size = new Size(49, 37);
+            button12.TabIndex = 12;
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += wybcz;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(843, 413);
+            Controls.Add(button12);
+            Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -183,8 +208,12 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(859, 452);
+            MinimumSize = new Size(859, 452);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Notepad";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -207,5 +236,7 @@
         private Button button8;
         private Button button9;
         private Button button10;
+        private Button button11;
+        private Button button12;
     }
 }
