@@ -50,6 +50,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.White;
             textBox1.Location = new Point(15, 55);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -61,7 +62,7 @@
             // 
             button1.Location = new Point(748, 96);
             button1.Name = "button1";
-            button1.Size = new Size(67, 35);
+            button1.Size = new Size(83, 35);
             button1.TabIndex = 1;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
@@ -71,7 +72,7 @@
             // 
             button2.Location = new Point(748, 55);
             button2.Name = "button2";
-            button2.Size = new Size(67, 35);
+            button2.Size = new Size(83, 35);
             button2.TabIndex = 2;
             button2.Text = "Open";
             button2.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@
             // 
             // button5
             // 
-            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.Image = Properties.Resources.center;
             button5.Location = new Point(15, 12);
             button5.Name = "button5";
             button5.Size = new Size(42, 37);
@@ -121,7 +122,7 @@
             // 
             // button6
             // 
-            button6.Image = Properties.Resources.left;
+            button6.Image = Properties.Resources.left1;
             button6.Location = new Point(63, 12);
             button6.Name = "button6";
             button6.Size = new Size(48, 37);
@@ -151,7 +152,7 @@
             // 
             // button9
             // 
-            button9.Image = (Image)resources.GetObject("button9.Image");
+            button9.Image = Properties.Resources.printer;
             button9.Location = new Point(334, 12);
             button9.Name = "button9";
             button9.Size = new Size(49, 37);
@@ -161,7 +162,7 @@
             // 
             // button10
             // 
-            button10.Image = (Image)resources.GetObject("button10.Image");
+            button10.Image = Properties.Resources.broom;
             button10.Location = new Point(279, 12);
             button10.Name = "button10";
             button10.Size = new Size(49, 37);
@@ -171,7 +172,7 @@
             // 
             // button11
             // 
-            button11.Image = (Image)resources.GetObject("button11.Image");
+            button11.Image = Properties.Resources.bold;
             button11.Location = new Point(389, 12);
             button11.Name = "button11";
             button11.Size = new Size(49, 37);
@@ -181,7 +182,7 @@
             // 
             // button12
             // 
-            button12.Image = (Image)resources.GetObject("button12.Image");
+            button12.Image = Properties.Resources.answer;
             button12.Location = new Point(444, 12);
             button12.Name = "button12";
             button12.Size = new Size(49, 37);
