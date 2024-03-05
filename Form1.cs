@@ -12,7 +12,7 @@ namespace Notatnik
         public Form1()
         {
             InitializeComponent();
-
+            //ELO
 
         }
 
