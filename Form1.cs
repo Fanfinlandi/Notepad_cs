@@ -129,8 +129,23 @@ namespace Notatnik
         private void button4_Click(object sender, EventArgs e)
         {
 
-            colorDialog1 = new ColorDialog();
-            colorDialog1.ShowDialog();
+            using (FontDialog fontDialog = new FontDialog())
+            {
+                fontDialog.Font = textBox1.Font;
+
+                
+                using (ColorDialog colorDialog = new ColorDialog())
+                {
+                    if (colorDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        
+                        textBox1.ForeColor = colorDialog.Color;
+                    }
+                }
+
+               
+            }
+
 
 
 
