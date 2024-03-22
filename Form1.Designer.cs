@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
             saveFileDialog1 = new SaveFileDialog();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             colorDialog1 = new ColorDialog();
@@ -42,10 +39,10 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
-            button9 = new Button();
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // textBox1
@@ -54,39 +51,9 @@
             textBox1.Location = new Point(15, 55);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(727, 346);
+            textBox1.Size = new Size(816, 346);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(748, 96);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 35);
-            button1.TabIndex = 1;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(748, 55);
-            button2.Name = "button2";
-            button2.Size = new Size(83, 35);
-            button2.TabIndex = 2;
-            button2.Text = "Open";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(748, 365);
-            button3.Name = "button3";
-            button3.Size = new Size(83, 36);
-            button3.TabIndex = 3;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += exit;
             // 
             // colorDialog1
             // 
@@ -102,7 +69,8 @@
             // 
             // button4
             // 
-            button4.Location = new Point(169, 12);
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            button4.Location = new Point(245, 12);
             button4.Name = "button4";
             button4.Size = new Size(49, 37);
             button4.TabIndex = 4;
@@ -113,7 +81,7 @@
             // button5
             // 
             button5.Image = Properties.Resources.center;
-            button5.Location = new Point(15, 12);
+            button5.Location = new Point(91, 12);
             button5.Name = "button5";
             button5.Size = new Size(42, 37);
             button5.TabIndex = 5;
@@ -123,7 +91,7 @@
             // button6
             // 
             button6.Image = Properties.Resources.left1;
-            button6.Location = new Point(63, 12);
+            button6.Location = new Point(139, 12);
             button6.Name = "button6";
             button6.Size = new Size(48, 37);
             button6.TabIndex = 6;
@@ -133,7 +101,7 @@
             // button7
             // 
             button7.Image = Properties.Resources.right;
-            button7.Location = new Point(117, 12);
+            button7.Location = new Point(193, 12);
             button7.Name = "button7";
             button7.Size = new Size(46, 37);
             button7.TabIndex = 7;
@@ -143,27 +111,17 @@
             // button8
             // 
             button8.Image = Properties.Resources.Link;
-            button8.Location = new Point(224, 12);
+            button8.Location = new Point(300, 12);
             button8.Name = "button8";
             button8.Size = new Size(49, 37);
             button8.TabIndex = 8;
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
-            // button9
-            // 
-            button9.Image = Properties.Resources.printer;
-            button9.Location = new Point(334, 12);
-            button9.Name = "button9";
-            button9.Size = new Size(49, 37);
-            button9.TabIndex = 9;
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += druk;
-            // 
             // button10
             // 
             button10.Image = Properties.Resources.broom;
-            button10.Location = new Point(279, 12);
+            button10.Location = new Point(355, 12);
             button10.Name = "button10";
             button10.Size = new Size(49, 37);
             button10.TabIndex = 10;
@@ -173,7 +131,7 @@
             // button11
             // 
             button11.Image = Properties.Resources.bold;
-            button11.Location = new Point(389, 12);
+            button11.Location = new Point(410, 12);
             button11.Name = "button11";
             button11.Size = new Size(49, 37);
             button11.TabIndex = 11;
@@ -183,12 +141,23 @@
             // button12
             // 
             button12.Image = Properties.Resources.answer;
-            button12.Location = new Point(444, 12);
+            button12.Location = new Point(465, 12);
             button12.Name = "button12";
             button12.Size = new Size(49, 37);
             button12.TabIndex = 12;
             button12.UseVisualStyleBackColor = true;
             button12.Click += wybcz;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Save", "Open", "Print" });
+            comboBox1.Location = new Point(12, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(73, 23);
+            comboBox1.TabIndex = 13;
+            comboBox1.Text = "Plik";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Form1
             // 
@@ -196,18 +165,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(843, 413);
+            Controls.Add(comboBox1);
             Controls.Add(button12);
             Controls.Add(button11);
             Controls.Add(button10);
-            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(textBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(859, 452);
@@ -223,9 +189,6 @@
         #endregion
 
         private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
         private SaveFileDialog saveFileDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private OpenFileDialog openFileDialog1;
@@ -235,9 +198,9 @@
         private Button button6;
         private Button button7;
         private Button button8;
-        private Button button9;
         private Button button10;
         private Button button11;
         private Button button12;
+        private ComboBox comboBox1;
     }
 }

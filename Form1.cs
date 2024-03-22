@@ -22,10 +22,8 @@ namespace Notatnik
 
         }
 
-        private void exit(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+      
+        
 
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -40,35 +38,12 @@ namespace Notatnik
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
-            saveFileDialog.Title = "Zapisz plik";
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
-                    {
-                        string dane = textBox1.Text;
-                        sw.Write(dane);
-
-
-
-                    }
-
-                    MessageBox.Show("Plik zosta³ zapisany pomyœlnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Wyst¹pi³ b³¹d podczas zapisywania pliku: {ex.Message}", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            
         }
 
 
 
-        private void druk(object sender, EventArgs e)
+        private void druk()
         {
             using (PrintDialog printDialog = new PrintDialog())
             {
@@ -111,15 +86,7 @@ namespace Notatnik
         private void button2_Click(object sender, EventArgs e)
         {
 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                sciezkaPliku = openFileDialog.FileName;
-                WyswietlZawartoscPliku();
-            }
-
+           
 
 
 
@@ -133,17 +100,17 @@ namespace Notatnik
             {
                 fontDialog.Font = textBox1.Font;
 
-                
+
                 using (ColorDialog colorDialog = new ColorDialog())
                 {
                     if (colorDialog.ShowDialog() == DialogResult.OK)
                     {
-                        
+
                         textBox1.ForeColor = colorDialog.Color;
                     }
                 }
 
-               
+
             }
 
 
@@ -208,6 +175,79 @@ namespace Notatnik
 
 
             }
+        }
+        private void savefile()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
+            saveFileDialog.Title = "Zapisz plik";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        string dane = textBox1.Text;
+                        sw.Write(dane);
+
+
+
+                    }
+
+                    MessageBox.Show("Plik zosta³ zapisany pomyœlnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wyst¹pi³ b³¹d podczas zapisywania pliku: {ex.Message}", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+
+        }
+        private void openfile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                sciezkaPliku = openFileDialog.FileName;
+                WyswietlZawartoscPliku();
+            }
+
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedOption = comboBox1.SelectedItem.ToString();
+
+            
+            if (selectedOption == "Save")
+            {
+                savefile();
+                
+            }
+            if(selectedOption=="Open")
+            {
+
+
+
+                openfile();
+            }
+            if (selectedOption == "Print")
+            {
+                druk();
+            }
+               
+            
+            
+               
+               
+            
+
+
+
         }
     }
 }
