@@ -220,6 +220,7 @@ namespace Notatnik
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBox1.Text = "File";
             string selectedOption = comboBox1.SelectedItem.ToString();
 
             
