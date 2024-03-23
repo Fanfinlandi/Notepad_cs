@@ -12,7 +12,7 @@ namespace Notatnik
         public Form1()
         {
             InitializeComponent();
-            //ELO
+
 
         }
 
@@ -22,8 +22,8 @@ namespace Notatnik
 
         }
 
-      
-        
+
+
 
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -38,7 +38,7 @@ namespace Notatnik
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -86,7 +86,7 @@ namespace Notatnik
         private void button2_Click(object sender, EventArgs e)
         {
 
-           
+
 
 
 
@@ -120,12 +120,12 @@ namespace Notatnik
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.TextAlign = HorizontalAlignment.Center;
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            textBox1.TextAlign = HorizontalAlignment.Left;
+
 
         }
 
@@ -161,7 +161,7 @@ namespace Notatnik
             textBox1.Font = new Font(textBox1.Font, FontStyle.Bold);
 
         }
-        private void wybcz(object sender, EventArgs e)
+        private void wybcz()
         {
             using (FontDialog fontDialog = new FontDialog())
             {
@@ -220,16 +220,16 @@ namespace Notatnik
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             string selectedOption = comboBox1.SelectedItem.ToString();
 
-            
+
             if (selectedOption == "Save")
             {
                 savefile();
-                
+
             }
-            if(selectedOption=="Open")
+            if (selectedOption == "Open")
             {
 
 
@@ -240,15 +240,41 @@ namespace Notatnik
             {
                 druk();
             }
-               
-            
-            
-               
-               
-            
+
+
+
+
+
+
 
 
 
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedOption = comboBox2.SelectedItem.ToString();
+
+            if (selectedOption == "Center")
+            {
+                textBox1.TextAlign = HorizontalAlignment.Center;
+            }
+            if (selectedOption == "Left")
+            {
+                textBox1.TextAlign = HorizontalAlignment.Left;
+            }
+            if (selectedOption == "Right")
+            {
+                textBox1.TextAlign = HorizontalAlignment.Right;
+            }
+            if(selectedOption == "Text")
+            {
+                wybcz();
+            }
+
+
+        }
+
+       
     }
 }
