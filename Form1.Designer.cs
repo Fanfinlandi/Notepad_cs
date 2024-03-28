@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             saveFileDialog1 = new SaveFileDialog();
@@ -40,6 +41,8 @@
             button11 = new Button();
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            label1 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -127,12 +130,27 @@
             comboBox2.Text = "Edit";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(625, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 30);
+            label1.TabIndex = 15;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(843, 413);
+            Controls.Add(label1);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(button11);
@@ -164,5 +182,7 @@
         private Button button11;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
+        private System.Windows.Forms.Timer timer1;
+        private Label label1;
     }
 }

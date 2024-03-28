@@ -1,5 +1,6 @@
 using System.Data;
 using System.Drawing.Printing;
+using System.Reflection.Emit;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -13,7 +14,9 @@ namespace Notatnik
         {
             InitializeComponent();
 
-
+            timer1.Tick += timer1_Tick;
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private string sciezkaPliku;
@@ -267,7 +270,7 @@ namespace Notatnik
             {
                 textBox1.TextAlign = HorizontalAlignment.Right;
             }
-            if(selectedOption == "Text")
+            if (selectedOption == "Text")
             {
                 wybcz();
             }
@@ -275,6 +278,12 @@ namespace Notatnik
 
         }
 
-       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            label1.Text = DateTime.Now.ToString();
+
+
+        }
     }
 }
