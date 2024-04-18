@@ -10,6 +10,7 @@ namespace Notatnik
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -221,10 +222,29 @@ namespace Notatnik
             }
 
         }
+
+            
+
+
+
+
+        
+
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
+
+
+
 
             string selectedOption = comboBox1.SelectedItem.ToString();
+
+           
+
+
 
 
             if (selectedOption == "Save")
@@ -287,3 +307,4 @@ namespace Notatnik
         }
     }
 }
+
