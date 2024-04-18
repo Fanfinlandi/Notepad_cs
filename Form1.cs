@@ -15,6 +15,8 @@ namespace Notatnik
         public Form1()
         {
             InitializeComponent();
+            
+
 
             timer1.Tick += timer1_Tick;
             timer1.Interval = 1000;
@@ -118,7 +120,7 @@ namespace Notatnik
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button10_Click(object sender, EventArgs e)

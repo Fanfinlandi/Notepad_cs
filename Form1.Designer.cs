@@ -61,11 +61,12 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.BackColor = Color.White;
-            textBox1.Location = new Point(0, 62);
+            textBox1.Location = new Point(0, 70);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(843, 339);
+            textBox1.Size = new Size(843, 331);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -85,9 +86,9 @@
             // 
             button4.BackColor = Color.White;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button4.Location = new Point(3, 27);
+            button4.Location = new Point(0, 30);
             button4.Name = "button4";
-            button4.Size = new Size(49, 32);
+            button4.Size = new Size(49, 34);
             button4.TabIndex = 4;
             button4.Text = "Color";
             button4.UseVisualStyleBackColor = false;
@@ -98,9 +99,9 @@
             button10.BackColor = Color.White;
             button10.ForeColor = SystemColors.ControlText;
             button10.Image = Properties.Resources.broom;
-            button10.Location = new Point(113, 27);
+            button10.Location = new Point(49, 30);
             button10.Name = "button10";
-            button10.Size = new Size(49, 32);
+            button10.Size = new Size(49, 34);
             button10.TabIndex = 10;
             button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
@@ -109,9 +110,9 @@
             // 
             button11.BackColor = Color.White;
             button11.Image = Properties.Resources.bold;
-            button11.Location = new Point(58, 27);
+            button11.Location = new Point(98, 30);
             button11.Name = "button11";
-            button11.Size = new Size(49, 32);
+            button11.Size = new Size(49, 34);
             button11.TabIndex = 11;
             button11.UseVisualStyleBackColor = false;
             button11.Click += button11_Click;
@@ -123,9 +124,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(589, 29);
+            label1.Location = new Point(843, 24);
             label1.Name = "label1";
             label1.Size = new Size(0, 30);
             label1.TabIndex = 15;
@@ -135,6 +137,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
             menuStrip1.Size = new Size(843, 24);
             menuStrip1.TabIndex = 16;
             menuStrip1.Text = "menuStrip1";
@@ -150,21 +153,21 @@
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(103, 22);
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(103, 22);
             openToolStripMenuItem.Text = "Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // printToolStripMenuItem
             // 
             printToolStripMenuItem.Name = "printToolStripMenuItem";
-            printToolStripMenuItem.Size = new Size(180, 22);
+            printToolStripMenuItem.Size = new Size(103, 22);
             printToolStripMenuItem.Text = "Print";
             printToolStripMenuItem.Click += printToolStripMenuItem_Click;
             // 
@@ -178,35 +181,35 @@
             // centerToolStripMenuItem
             // 
             centerToolStripMenuItem.Name = "centerToolStripMenuItem";
-            centerToolStripMenuItem.Size = new Size(180, 22);
+            centerToolStripMenuItem.Size = new Size(109, 22);
             centerToolStripMenuItem.Text = "Center";
             centerToolStripMenuItem.Click += centerToolStripMenuItem_Click;
             // 
             // rightToolStripMenuItem
             // 
             rightToolStripMenuItem.Name = "rightToolStripMenuItem";
-            rightToolStripMenuItem.Size = new Size(180, 22);
+            rightToolStripMenuItem.Size = new Size(109, 22);
             rightToolStripMenuItem.Text = "Right";
             rightToolStripMenuItem.Click += rightToolStripMenuItem_Click;
             // 
             // leftToolStripMenuItem
             // 
             leftToolStripMenuItem.Name = "leftToolStripMenuItem";
-            leftToolStripMenuItem.Size = new Size(180, 22);
+            leftToolStripMenuItem.Size = new Size(109, 22);
             leftToolStripMenuItem.Text = "Left";
             leftToolStripMenuItem.Click += leftToolStripMenuItem_Click;
             // 
             // textToolStripMenuItem
             // 
             textToolStripMenuItem.Name = "textToolStripMenuItem";
-            textToolStripMenuItem.Size = new Size(180, 22);
+            textToolStripMenuItem.Size = new Size(109, 22);
             textToolStripMenuItem.Text = "Text";
             textToolStripMenuItem.Click += textToolStripMenuItem_Click;
             // 
             // timeToolStripMenuItem
             // 
             timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            timeToolStripMenuItem.Size = new Size(180, 22);
+            timeToolStripMenuItem.Size = new Size(109, 22);
             timeToolStripMenuItem.Text = "Time";
             timeToolStripMenuItem.Click += timeToolStripMenuItem_Click;
             // 
@@ -220,14 +223,14 @@
             // zoomToolStripMenuItem
             // 
             zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            zoomToolStripMenuItem.Size = new Size(180, 22);
+            zoomToolStripMenuItem.Size = new Size(114, 22);
             zoomToolStripMenuItem.Text = "Zoom+";
             zoomToolStripMenuItem.Click += zoomToolStripMenuItem_Click;
             // 
             // zoomToolStripMenuItem1
             // 
             zoomToolStripMenuItem1.Name = "zoomToolStripMenuItem1";
-            zoomToolStripMenuItem1.Size = new Size(180, 22);
+            zoomToolStripMenuItem1.Size = new Size(114, 22);
             zoomToolStripMenuItem1.Text = "Zoom-";
             // 
             // helpToolStripMenuItem
@@ -240,7 +243,7 @@
             // zgłośProblemToolStripMenuItem
             // 
             zgłośProblemToolStripMenuItem.Name = "zgłośProblemToolStripMenuItem";
-            zgłośProblemToolStripMenuItem.Size = new Size(180, 22);
+            zgłośProblemToolStripMenuItem.Size = new Size(148, 22);
             zgłośProblemToolStripMenuItem.Text = "send message";
             zgłośProblemToolStripMenuItem.Click += zgłośProblemToolStripMenuItem_Click;
             // 
@@ -258,8 +261,6 @@
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            MaximumSize = new Size(859, 452);
-            MinimumSize = new Size(859, 452);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Notepad";
