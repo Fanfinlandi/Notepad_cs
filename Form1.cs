@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 
 namespace Notatnik
+    //NOTATNIK  
 {
     public partial class Form1 : Form
     {
@@ -39,10 +40,6 @@ namespace Notatnik
             Font czcionka = new Font("Arial", 12);
             Brush pêdzel = Brushes.Black;
             e.Graphics.DrawString(tekstDoWydruku, czcionka, pêdzel, 10, 10);
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -87,16 +84,6 @@ namespace Notatnik
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -122,33 +109,12 @@ namespace Notatnik
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.TextAlign = HorizontalAlignment.Right;
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            string tekst = textBox1.Text;
-            string podkreslonyTekst = $"_{tekst}_";
-            textBox1.Text = podkreslonyTekst;
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -223,87 +189,88 @@ namespace Notatnik
 
         }
 
-            
-
-
-
-
-        
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-
-
-
-
-            string selectedOption = comboBox1.SelectedItem.ToString();
-
-           
-
-
-
-
-            if (selectedOption == "Save")
-            {
-                savefile();
-
-            }
-            if (selectedOption == "Open")
-            {
-
-
-
-                openfile();
-            }
-            if (selectedOption == "Print")
-            {
-                druk();
-            }
-
-
-
-
-
-
-
-
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedOption = comboBox2.SelectedItem.ToString();
-
-            if (selectedOption == "Center")
-            {
-                textBox1.TextAlign = HorizontalAlignment.Center;
-            }
-            if (selectedOption == "Left")
-            {
-                textBox1.TextAlign = HorizontalAlignment.Left;
-            }
-            if (selectedOption == "Right")
-            {
-                textBox1.TextAlign = HorizontalAlignment.Right;
-            }
-            if (selectedOption == "Text")
-            {
-                wybcz();
-            }
-
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             label1.Text = DateTime.Now.ToString();
 
 
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+        }
+
+        private void centerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            textBox1.TextAlign = HorizontalAlignment.Center;
+
+
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            savefile();
+
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openfile();
+
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            druk();
+
+        }
+
+        private void textToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wybcz();
+        }
+
+        private void timeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = DateTime.Now.ToString();
+        }
+
+        private void leftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.TextAlign = HorizontalAlignment.Left;
+
+        }
+
+        private void rightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.TextAlign = HorizontalAlignment.Right;
+
+        }
+
+        private void zg³oœProblemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+        }
+
+        private void zoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
