@@ -244,7 +244,7 @@
             // zgłośProblemToolStripMenuItem
             // 
             zgłośProblemToolStripMenuItem.Name = "zgłośProblemToolStripMenuItem";
-            zgłośProblemToolStripMenuItem.Size = new Size(180, 22);
+            zgłośProblemToolStripMenuItem.Size = new Size(148, 22);
             zgłośProblemToolStripMenuItem.Text = "send message";
             zgłośProblemToolStripMenuItem.Click += zgłośProblemToolStripMenuItem_Click;
             // 
