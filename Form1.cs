@@ -3,6 +3,7 @@ using System.Drawing.Printing;
 using System.Reflection.Emit;
 using System.Timers;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 
@@ -15,7 +16,7 @@ namespace Notatnik
         public Form1()
         {
             InitializeComponent();
-            
+
 
 
             timer1.Tick += timer1_Tick;
@@ -116,11 +117,11 @@ namespace Notatnik
             textBox1.TextAlign = HorizontalAlignment.Right;
         }
 
-       
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -150,6 +151,9 @@ namespace Notatnik
         }
         private void savefile()
         {
+
+
+
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
             saveFileDialog.Title = "Zapisz plik";
@@ -261,7 +265,7 @@ namespace Notatnik
 
         private void zg³oœProblemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Wys³ano zg³oszenie :)");
 
 
 
@@ -272,7 +276,12 @@ namespace Notatnik
 
         private void zoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            textBox1.Font = new Font(textBox1.Font.FontFamily, textBox1.Font.Size + 2);
+        }
+
+        private void zoomToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            textBox1.Font = new Font(textBox1.Font.FontFamily, textBox1.Font.Size - 2);
         }
     }
 }
